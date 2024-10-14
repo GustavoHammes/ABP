@@ -29,13 +29,13 @@ app.listen(PORTA, () => {
 });
 
 // Rota para efetuar cadastro
-app.post("/usuario", cadastrarUsuario);
+app.get("/usuario", cadastrarUsuario);
 
 // Rota para fazer o login
 app.post("/login", login);
 
 // Rota para listar as questões
-app.post("/questao", listarQuestao);
+app.use("/questao", listarQuestao);
 
 // Rota para salvar questionário
 app.post("/questionario", salvarQuestionario);
